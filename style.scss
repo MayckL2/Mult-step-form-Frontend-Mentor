@@ -1,0 +1,168 @@
+body {
+    background-color: rgb(191, 215, 221);
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    margin: 20px auto !important;
+}
+
+.left {
+    background-image: url(assets/images/bg-sidebar-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 250px !important;
+    height: 80vh;
+    padding: 20px;
+    border-radius: 20px;
+
+    * {
+        margin: 0;
+    }
+
+    div {
+        display: grid;
+        grid-template-columns: 60px auto;
+        width: 300px;
+        margin: 10px 0 30px 10px;
+
+        .number {
+            grid-row-start: 1;
+            grid-row-end: 3;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 30px;
+            text-align: center;
+            border: 2px solid white;
+            color: white;
+            cursor: pointer;
+            transition: all 0.5s;
+        }
+
+        .number:hover {
+            border: 2px solid transparent;
+            background-color: rgb(191, 215, 221);
+            color: blue;
+        }
+
+        .step {
+            color: rgb(160, 158, 158);
+        }
+
+        h1 {
+            font-size: 20px;
+            color: white;
+        }
+    }
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .step1, .step2, .step3, .step4{
+        height: 80vh;
+
+        h1 {
+            color: blue;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        p {
+            opacity: 0.5;
+            font-size: 15px;
+        }
+        .next {
+            border: none;
+            background-color: rgb(2, 2, 99);
+            border-radius: 10px;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            width: 150px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            transition: all 0.5s;
+        }
+    
+        .next:hover {
+            background-color: rgb(6, 6, 206);
+        }
+        .back{
+            border: 2px solid transparent;
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            color: blue;
+            font-weight: bold;
+            width: 150px;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            transition: all 0.5s;
+        }
+        .back:hover{
+            border: 2px solid blue;
+        }
+    }
+    .step1 {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+
+
+        label {
+            margin: 5px 0;
+            color: blue;
+        }
+
+        input {
+            margin: 5px 0;
+            border-radius: 5px;
+            padding: 5px;
+            border: 1px solid transparent;
+            transition: all 0.5s;
+            font-weight: bold;
+        }
+
+        input:hover {
+            border: 1px solid black;
+        }
+    }
+    .step2{
+
+        .plans{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            div{
+                border: 2px solid rgba(0, 0, 255, 0.089);
+                border-radius: 20px;
+                margin: 10px;
+                width: 30%;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                cursor: pointer;
+                transition: all 0.5s;
+                
+                img{
+                    margin: 20px 0;
+                }
+            }
+            div:hover{
+                border: 2px solid blue;
+            }
+        }
+    }
+}

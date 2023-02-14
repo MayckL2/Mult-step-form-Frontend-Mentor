@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <title>Frontend Mentor | Multi-step form</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container p-0">
+    <!-- Sidebar start -->
+    <section class="container m-3 left">
+      <div>
+        <p class="number">1</p>
+        <p class="step">Step 1</p>
+        <h1>Your info</h1>
+      </div>
+
+      <div>
+        <p class="number">2</p>
+        <p class="step">Step 2</p>
+        <h1>Select plan</h1>
+      </div>
+
+      <div>
+        <p class="number">3</p>
+        <p class="step">Step 3</p>
+        <h1>Add-ons</h1>
+      </div>
+
+      <div>
+        <p class="number">4</p>
+        <p class="step">Step 4</p>
+        <h1>Summary</h1>
+      </div>
+
+    </section>
+    <!-- Sidebar end -->
+
+    <!-- Step 1 start -->
+    <section class="container right m-3">
+
+      <div class="step1">
+        <h1>Personal info</h1>
+        <p>Please provide your name, email address, and phone number.</p>
+
+        <label>Name</label>
+        <input type="text" value="e.g. Stephen King" required>
+
+        <label>Email Address</label>
+        <input type="email" value="e.g. stephenking@lorem.com" required>
+
+        <label>Phone Number</label>
+        <input type="text" value="e.g. +1 234 567 890" required>
+
+        <button class="next">Next Step</button>
+      </div>
+
+
+      <!-- Step 1 end -->
+
+      <!-- Step 2 start -->
+
+      <div class="container step2">
+        <h1>
+          Select your plan
+        </h1>
+        <p>
+          You have the option of monthly or yearly billing.
+        </p>
+
+        <div class="plans">
+          <div>
+            <img src="assets/images/icon-arcade.svg" alt="">
+            <h2>
+              Arcade
+            </h2>
+            <p>
+              $9/mo
+            </p>
+          </div>
+
+          <div>
+            <img src="assets/images/icon-advanced.svg" alt="">
+            <h2>
+              Advanced
+            </h2>
+            <p>
+              $12/mo
+            </p>
+          </div>
+
+          <div>
+            <img src="assets/images/icon-pro.svg" alt="">
+            <h2>
+              Pro
+            </h2>
+            <p>
+              $15/mo
+            </p>
+          </div>
+        </div>
+
+        <div class="switch">
+          <h2>
+            Monthly
+          </h2>
+          <!-- switcher -->
+          <h2>
+            Yearly
+          </h2>
+        </div>
+
+        <button class="back">
+          Go Back
+        </button>
+
+        <button class="next">
+          Next Step
+        </button>
+      </div>
+    </section>
+
+  </main>
+  <!-- Step 2 end -->
+
+  <!-- Step 3 start -->
+
+  Pick add-ons
+  Add-ons help enhance your gaming experience.
+
+  Online service
+  Access to multiplayer games
+  +$1/mo
+
+  Larger storage
+  Extra 1TB of cloud save
+  +$2/mo
+
+  Customizable Profile
+  Custom theme on your profile
+  +$2/mo
+
+  Go Back
+  Next Step
+
+  <!-- Step 3 end -->
+
+  <!-- Step 4 start -->
+
+  Finishing up
+  Double-check everything looks OK before confirming.
+
+  <!-- Dynamically add subscription and add-on selections here -->
+
+  Total (per month/year)
+
+  Go Back
+  Confirm
+
+  <!-- Step 4 end -->
+
+  <!-- Step 5 start -->
+
+  Thank you!
+
+  Thanks for confirming your subscription! We hope you have fun
+  using our platform. If you ever need support, please feel free
+  to email us at support@loremgaming.com.
+
+  <!-- Step 5 end -->
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
