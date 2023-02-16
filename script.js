@@ -30,6 +30,12 @@ function backStep() {
     changeMarker()
 }
 
+// escolhe plano
+let planForm = ""
+function escPlan(plan){
+    planForm = plan
+    alert("selecionou: "+planForm)
+}
 // muda botao checkbox
 let trocado = false
 function toggleSwitch() {
@@ -81,4 +87,26 @@ function check(e) {
     } else {
         box[e].checked = false
     }
+}
+
+function finish(){
+    let finalCostPlan = document.querySelector("#finalCostPlan")
+    let planName = document.querySelector("#planName")
+    let finalPlan = document.querySelector("#finalPlan")
+    
+    planName.innerHTML = planForm
+    if(planForm == "Arcade" && plano == "mouthly"){
+        finalCostPlan.innerHTML = "<p>$9/mo</p>"
+    }else if(planForm == "Arcade" && plano == "yearly"){
+        finalCostPlan.innerHTML = "<p>$90/yr</p>"
+    }else if(planForm == "Advanced" && plano == "mouthly"){
+        finalCostPlan.innerHTML = "<p>$12/mo</p>"
+    }else if(planForm == "Advanced" && plano == "yearly"){
+        finalCostPlan.innerHTML = "<p>$120/yr</p>"
+    }else if(planForm == "Pro" && plano == "mouthly"){
+        finalCostPlan.innerHTML = "<p>$15/mo</p>"
+    }else if(planForm == "Pro" && plano == "yearly"){
+        finalCostPlan.innerHTML = "<p>$150/yr</p>"
+    }
+
 }

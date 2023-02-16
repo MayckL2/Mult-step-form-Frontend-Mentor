@@ -90,7 +90,7 @@
         </p>
 
         <div class="plans">
-          <div>
+          <div onclick="escPlan('Arcade')">
             <img src="assets/images/icon-arcade.svg" alt="">
             <h2>
               Arcade
@@ -101,7 +101,7 @@
             <h3 class="freeMouth">2 mouth free</h3>
           </div>
 
-          <div>
+          <div onclick="escPlan('Advanced')">
             <img src="assets/images/icon-advanced.svg" alt="">
             <h2>
               Advanced
@@ -112,7 +112,7 @@
             <h3 class="freeMouth">2 mouth free</h3>
           </div>
 
-          <div>
+          <div onclick="escPlan('Pro')">
             <img src="assets/images/icon-pro.svg" alt="">
             <h2>
               Pro
@@ -202,10 +202,10 @@
         <div class="summary container row">
           <div class="row">
             <div class="col">
-              <h3>Arcade(Yearly)</h3>
+              <h3 id="planName">Arcade(Yearly)</h3>
               <a href="" onclick="backStep()">Change</a>
             </div>
-            <div id="finalCostPlan" class="col" style="text-align: right;">
+            <div id="finalCostPlan" class="col text-primary" style="text-align: right;">
             </div>
           </div>
   
@@ -213,7 +213,7 @@
             <div class="col" id="finalPlan">
             </div>
             
-            <div id="finalCost" class="col" style="text-align: right;">
+            <div id="finalCost" class="col text-primary" style="text-align: right;">
             </div>
           </div>
 
@@ -221,7 +221,7 @@
         
         <div class="row">
           <p class="col">Total (per month/year)</p>
-          <p style="text-align: center;" class="col" id="total">+12/mo</p>
+          <p style="text-align: center;" class="col text-primary" id="total">+12/mo</p>
         </div>
         
         <button onclick="backStep()" class="back">
