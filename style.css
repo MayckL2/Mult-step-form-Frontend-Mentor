@@ -166,13 +166,14 @@ main {
   align-items: center;
 }
 .right .step2 .switch img {
+  rotate: 180deg;
   width: 40px;
   cursor: pointer;
 }
 .right .step2 .switch h2 {
   font-size: 20px;
 }
-.right .step2 .switch #mouth {
+.right .step2 .switch #year {
   opacity: 0.5;
 }
 .right .step3 {
@@ -185,12 +186,12 @@ main {
   border-radius: 10px;
   position: relative;
   transition: all 0.5s;
+  width: 90%;
   cursor: pointer;
 }
 .right .step3 .form-check input {
   position: absolute;
   top: 30%;
-  left: 6%;
   scale: 1.5;
 }
 .right .step3 .form-check .preco {
@@ -201,4 +202,20 @@ main {
 }
 .right .step3 .form-check:hover {
   border: 2px solid blue;
+}
+.right .step4 .summary {
+  background-color: rgba(128, 128, 128, 0.187);
+  border-radius: 10px;
+  padding: 10px;
+}
+.right .step4 .summary h3 {
+  color: rgb(1, 1, 138);
+  margin: 0;
+}
+.right .step4 .summary a {
+  color: gray;
+}
+.right .step4 .summary .row {
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
