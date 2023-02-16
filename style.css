@@ -9,6 +9,7 @@ main {
   background-color: white;
   border-radius: 20px;
   margin: 20px auto !important;
+  height: 85vh;
 }
 
 .left {
@@ -62,6 +63,9 @@ main {
 }
 .right .step1, .right .step2, .right .step3, .right .step4 {
   height: 80vh;
+  transition: all 0.5s;
+  padding-bottom: 20vh;
+  position: relative;
 }
 .right .step1 h1, .right .step2 h1, .right .step3 h1, .right .step4 h1 {
   color: blue;
@@ -107,7 +111,6 @@ main {
 .right .step1 {
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 .right .step1 label {
   margin: 5px 0;
@@ -123,6 +126,12 @@ main {
 }
 .right .step1 input:hover {
   border: 1px solid black;
+}
+.right .step2 {
+  height: 80vh;
+}
+.right .step2 .freeMouth {
+  display: none;
 }
 .right .step2 .plans {
   display: flex;
@@ -145,5 +154,51 @@ main {
   margin: 20px 0;
 }
 .right .step2 .plans div:hover {
+  border: 2px solid blue;
+}
+.right .step2 h3 {
+  font-size: 18px;
+}
+.right .step2 .switch {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.right .step2 .switch img {
+  width: 40px;
+  cursor: pointer;
+}
+.right .step2 .switch h2 {
+  font-size: 20px;
+}
+.right .step2 .switch #mouth {
+  opacity: 0.5;
+}
+.right .step3 {
+  margin-top: 1vh;
+}
+.right .step3 .form-check {
+  border: 2px solid rgba(0, 0, 255, 0.178);
+  padding: 10px 0 0 60px;
+  margin: 10px 0;
+  border-radius: 10px;
+  position: relative;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.right .step3 .form-check input {
+  position: absolute;
+  top: 30%;
+  left: 6%;
+  scale: 1.5;
+}
+.right .step3 .form-check .preco {
+  position: absolute;
+  top: 30%;
+  right: 5%;
+  color: purple;
+}
+.right .step3 .form-check:hover {
   border: 2px solid blue;
 }/*# sourceMappingURL=style.css.map */
