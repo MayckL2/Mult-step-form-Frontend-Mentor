@@ -19,7 +19,6 @@ function nextStep() {
     step1.style.marginTop = menos + "vh"
     stepMarker += 1
     changeMarker()
-    finish()
 }
 
 // move para o passo anterior do formulario
@@ -28,6 +27,7 @@ function backStep() {
     step1.style.marginTop = menos + "vh"
     stepMarker -= 1
     changeMarker()
+    clear()
 }
 
 // escolhe plano
@@ -86,13 +86,18 @@ function check(e) {
         box[e].checked = true
     } else {
         box[e].checked = false
-    }
+      }
+
+
 }
 
+let finalPlan = document.querySelector("#finalPlan")
 function finish(){
     let finalCostPlan = document.querySelector("#finalCostPlan")
     let planName = document.querySelector("#planName")
-    let finalPlan = document.querySelector("#finalPlan")
+    let costOnline = document.querySelector("#costOnline")
+    let costLarge = document.querySelector("#costLarge")
+    let costCustom = document.querySelector("#costCustom")
     
     planName.innerHTML = planForm
     if(planForm == "Arcade" && plano == "mouthly"){
@@ -109,4 +114,38 @@ function finish(){
         finalCostPlan.innerHTML = "<p>$150/yr</p>"
     }
 
+    if(box[0].checked == true && plano == "mouthly"){
+      costOnline.innerHTML = "+$1/mo"
+      finalPlan.innerHTML += "Online services"
+    }else if(box[0].checked == true && plano == "yearly"){
+      costOnline.innerHTML = "+$10/yr"
+      finalPlan.innerHTML += "Online services"
+    }else{
+      costOnline.innerHTML = ""
+    }
+    
+    if(box[1].checked == true && plano == "mouthly"){
+      costLarge.innerHTML = "+$2/mo"
+      finalPlan.innerHTML += "Larger storage"
+    }else if(box[1].checked == true && plano == "yearly"){
+      costLarge.innerHTML = "+$20/yr"
+      finalPlan.innerHTML += "Larger storage"
+    }else{
+      costLarge.innerHTML = ""
+    }
+
+    if(box[2].checked == true && plano == "mouthly"){
+      costCustom.innerHTML = "+$2/mo"
+      finalPlan.innerHTML += "Customizable profile"
+    }else if(box[2].checked == true && plano == "yearly"){
+      costCustom.innerHTML = "+$20/yr"
+      finalPlan.innerHTML += "Customizable profile"
+    }else{
+      costCustom.innerHTML = ""
+    }
+
+}
+
+function clear(){
+  finalPlan.innerHTML = ""
 }

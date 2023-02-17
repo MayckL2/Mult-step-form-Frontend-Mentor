@@ -178,11 +178,11 @@
           <p class="preco">+$2/mo</p>
         </div>
 
-        <button onclick="backStep()" class="back">
+        <button onclick="backStep(), finish()" class="back">
           Go Back
         </button>
 
-        <button onclick="nextStep()" class="next">
+        <button onclick="nextStep(), finish()" class="next">
           Next Step
         </button>
 
@@ -213,7 +213,10 @@
             <div class="col" id="finalPlan">
             </div>
             
-            <div id="finalCost" class="col text-primary" style="text-align: right;">
+            <div class="col text-primary" style="text-align: right;">
+              <div id="costOnline"></div>
+              <div id="costLarge"></div>
+              <div id="costCustom"></div>
             </div>
           </div>
 
