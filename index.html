@@ -27,7 +27,7 @@
 
 <body>
 
-  <main class="container row p-0">
+  <main class="container-md row p-0">
     <!-- Sidebar start -->
     <section class="container col-lg-1 col-md-1 m-3 left">
       <div>
@@ -205,14 +205,14 @@
               <h3 id="planName">Arcade(Yearly)</h3>
               <a href="" onclick="backStep()">Change</a>
             </div>
-            <div id="finalCostPlan" class="col text-primary" style="text-align: right;">
+            <div id="finalCostPlan" class="col" style="text-align: right;color: blue !important;">
             </div>
           </div>
-  
+
           <div class="row">
-            <div class="col" id="finalPlan">
+            <div class="col" id="finalPlan" style="opacity: 0.5;">
             </div>
-            
+
             <div class="col text-primary" style="text-align: right;">
               <div id="costOnline"></div>
               <div id="costLarge"></div>
@@ -221,12 +221,12 @@
           </div>
 
         </div>
-        
+
         <div class="row">
           <p class="col">Total (per month/year)</p>
-          <p style="text-align: center;" class="col text-primary" id="total">+12/mo</p>
+          <p style="text-align: center; font-size: 20px;opacity: 1 !important;" class="col text-primary" id="total"></p>
         </div>
-        
+
         <button onclick="backStep()" class="back">
           Go Back
         </button>
@@ -237,18 +237,20 @@
       </div>
 
       <!-- Step 4 end -->
+
+      <!-- Step 5 start -->
+
+      <div class="container step5">
+        <img src="assets/images/icon-thank-you.svg" alt="">
+        <h1>Thank you!</h1>
+        <p>Thanks for confirming your subscription! We hope you have fun
+          using our platform. If you ever need support, please feel free
+          to email us at support@loremgaming.com.</p>
+      </div>
+
+      <!-- Step 5 end -->
     </section>
   </main>
-  <!-- Step 5 start -->
-
-  Thank you!
-
-  Thanks for confirming your subscription! We hope you have fun
-  using our platform. If you ever need support, please feel free
-  to email us at support@loremgaming.com.
-
-  <!-- Step 5 end -->
-
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Mayck Luciano</a>.

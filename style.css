@@ -10,8 +10,15 @@ main {
   border-radius: 20px;
   margin: 20px auto !important;
   height: 85vh;
+  overflow: hidden;
 }
 
+@media (max-width: 800px) {
+  main {
+    margin: 0 !important;
+    height: auto;
+  }
+}
 .left {
   background-image: url(assets/images/bg-sidebar-desktop.svg);
   background-repeat: no-repeat;
@@ -55,28 +62,54 @@ main {
   font-size: 20px;
   color: white;
 }
+@media (max-width: 800px) {
+  .left {
+    display: flex;
+    width: auto !important;
+    height: 20vh;
+    position: absolute;
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+    z-index: 1;
+  }
+  .left h1 {
+    display: none;
+  }
+  .left .step {
+    display: none;
+  }
+}
 
 .right {
   display: flex;
   flex-direction: column;
   position: relative;
 }
-.right .step1, .right .step2, .right .step3, .right .step4 {
+@media (max-width: 800px) {
+  .right {
+    height: 95vh;
+    padding-top: 18vh;
+  }
+  .right .step4 {
+    margin: 17vh 0;
+  }
+}
+.right .step1, .right .step2, .right .step3, .right .step4, .right .step5 {
   height: 80vh;
   transition: all 0.5s;
   padding-bottom: 20vh;
   position: relative;
 }
-.right .step1 h1, .right .step2 h1, .right .step3 h1, .right .step4 h1 {
+.right .step1 h1, .right .step2 h1, .right .step3 h1, .right .step4 h1, .right .step5 h1 {
   color: blue;
   font-weight: bold;
   margin: 20px 0;
 }
-.right .step1 p, .right .step2 p, .right .step3 p, .right .step4 p {
+.right .step1 p, .right .step2 p, .right .step3 p, .right .step4 p, .right .step5 p {
   opacity: 0.5;
   font-size: 15px;
 }
-.right .step1 .next, .right .step2 .next, .right .step3 .next, .right .step4 .next {
+.right .step1 .next, .right .step2 .next, .right .step3 .next, .right .step4 .next, .right .step5 .next {
   border: none;
   background-color: rgb(2, 2, 99);
   border-radius: 10px;
@@ -89,10 +122,10 @@ main {
   right: 10px;
   transition: all 0.5s;
 }
-.right .step1 .next:hover, .right .step2 .next:hover, .right .step3 .next:hover, .right .step4 .next:hover {
+.right .step1 .next:hover, .right .step2 .next:hover, .right .step3 .next:hover, .right .step4 .next:hover, .right .step5 .next:hover {
   background-color: rgb(6, 6, 206);
 }
-.right .step1 .back, .right .step2 .back, .right .step3 .back, .right .step4 .back {
+.right .step1 .back, .right .step2 .back, .right .step3 .back, .right .step4 .back, .right .step5 .back {
   border: 2px solid transparent;
   background-color: white;
   border-radius: 10px;
@@ -105,7 +138,7 @@ main {
   left: 10px;
   transition: all 0.5s;
 }
-.right .step1 .back:hover, .right .step2 .back:hover, .right .step3 .back:hover, .right .step4 .back:hover {
+.right .step1 .back:hover, .right .step2 .back:hover, .right .step3 .back:hover, .right .step4 .back:hover, .right .step5 .back:hover {
   border: 2px solid blue;
 }
 .right .step1 {
@@ -218,4 +251,13 @@ main {
 .right .step4 .summary .row {
   display: flex;
   justify-content: center;
+}
+.right .step5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.right .step5 p {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

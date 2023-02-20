@@ -10,6 +10,13 @@ main {
     border-radius: 20px;
     margin: 20px auto !important;
     height: 85vh;
+    overflow: hidden;
+}
+@media (max-width: 800px){
+    main{
+        margin: 0 !important;
+        height: auto;
+    }
 }
 
 .left {
@@ -60,6 +67,23 @@ main {
             color: white;
         }
     }
+
+    @media (max-width: 800px) {
+        display: flex;
+        width: auto !important;
+        height: 20vh;
+        position: absolute;
+        margin-top: 0px !important;
+        margin-left: 0px !important;
+        z-index: 1;
+
+        h1{
+            display: none;
+        }
+        .step{
+            display: none;
+        }
+    }
 }
 
 .right {
@@ -67,7 +91,16 @@ main {
     flex-direction: column;
     position: relative;
 
-    .step1, .step2, .step3, .step4{
+    @media (max-width:800px) {
+        height: 95vh;
+        padding-top: 18vh;
+
+        .step4{
+            margin: 17vh 0;
+        }
+    }
+
+    .step1, .step2, .step3, .step4, .step5{
         height: 80vh;
         transition: all 0.5s;
         padding-bottom: 20vh;
@@ -240,6 +273,16 @@ main {
 
                 
             }
+        }
+    }
+    .step5{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p{
+            text-align: center;
         }
     }
 }
